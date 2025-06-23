@@ -38,7 +38,7 @@ class MergeSort < self
   end
 
   def merge_sort(array, l, r)
-    return if l >= r 
+    return if l >= r
 
     m = (r - l) / 2
     merge_sort(array, l, m)
