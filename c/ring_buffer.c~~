@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main(void) {
+  int *ring_buffer[7];
+
+  int value = 20;
+  int read_index = -1;
+  int write_index = -1;
+  while (1) {
+    int key[1];
+    printf("Enter the key");
+    while ((key = getchar()) != EOF) {
+      putchar(key);
+    }
+
+    if (write_index == -1) {
+      ring_buffer[0] = &key;
+    }
+    else {
+      ring_buffer[write_index] = &key;
+    }
+  }
+}

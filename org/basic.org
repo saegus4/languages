@@ -1,0 +1,48 @@
+* Tutu-Heading
+
+Tutu-Paragraph
+Another-Tutu-Paragraph
+*TUTU* Paragraph =cool text=
+_word can never
+
+Unodered TutuList:
+- Find a love
+- Sun time
+- touch gras
+
+Numbered tutulist:
+
+1. 
+2. Tutu
+3. ru
+
+
+** Tutu-Heading lvl 2
+*** Tutu-Heading lvl 3
+
+* TODO Buy groceries [4/4]
+** DONE Buy vegetables
+** DONE 
+** DONE 
+** DONE Buy fruit
+
+* TODO Buy things [4/4]
+
+ - [X] Fruit  
+ - [X] Veggies
+ - [X] Dogfood
+
+
+* TODO World domination
+DEADLINE: <2025-06-30 Mon>
+
+* GF Bday
+SCHEDULED: <2025-06-30 Mon>
+
+
+
+
+
+     
+  
+
