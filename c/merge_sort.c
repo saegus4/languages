@@ -2,44 +2,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+double mergeSort(double array[], size_t array_length) {
+  if (array_length == 1) { 
+    return array;
+  }
+
+  int mid = array_length / 2;
+  double left_array[mid];
+  double right_array[mid];
+  for (size_t i = 0; i < mid; ++i) {
+    left_array[i] = array[i];
+  }
+  for (size_t i = 0; i < mid; ++i) {
+    right_array[i] = array[i];
+  }
+  left_array = mergeSort(left_array, mid);
+  right_array = mergeSort(right_array, mid);
+  for (size_t i = 0; i < mid; ++i) {
+    printf("Number %f", left_array[i]);
+  }
+
+  return 0.1;
+}
+
 int main(int argc, char* argv[argc+1]) { 
   int left = 0;
   size_t length = argc - 1;
-  int right = length - 1; 
+  int right = length - 1;
   size_t mid = (left + right) / 2;
-  double array_1[mid];
-  double array_2[length - mid];
-  int index_1 = 0;
-  int index_2 = 0;
+  double array[length];
 
   for (size_t i = 0; i < length; ++i) {
     double number = strtod(argv[i + 1], NULL);
-    if (i <= mid) {
-      array_1[index_1] = number; 
-      index_1++;
-    } else {
-      array_2[index_2] = number;
-      index_2++;
-    }
+    array[i] = number;
   }
-}
 
-double mergeSort(double array_1[], size_t array_1_length, double array_2[], size_t array_2_length) {
-  double sub_array_1[array_1_length];
-  double sub_array_2[array_2_length];
-  for (size_t i = 0; i < array_1_length; ++i) {
-    double number = array_1[i];
-    for (size_t t = 0; t < array_1_length; ++i) {
-      if (sub_array_1[t]) {
-	if (sub_array_1[t] > number) {
-	  sub_array_1[t + 1] = sub_array_1[t];
-	  sub_array_1[t] = number;
-	}	
-      } else {
-	sub_array_1[t] = number;
-      }
-    }
-  }
-  
-  return 0.1;
+  mergeSort(array, length);
 }
